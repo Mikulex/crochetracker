@@ -1,10 +1,11 @@
 <script setup>
-import { ref } from "vue";
+import {ref} from "vue";
 import CrochetPart from "@/components/CrochetPart.vue";
 
 const id = ref(0);
 const name = ref("ProjectName");
 const newPartName = ref("");
+
 function createPart() {
   parts.value.push({
     key: id.value++,
@@ -33,9 +34,9 @@ const parts = ref([
 
 <template>
   <h2>{{ name }}</h2>
-  <input v-model="newPartName" placeholder="New Part Name" />
+  <input v-model="newPartName" placeholder="New Part Name"/>
   <button @click="createPart">Create</button>
-  <CrochetPart v-for="part in parts" :key="part.key" v-bind="part" />
+  <CrochetPart v-for="part in parts" :key="part.key" v-bind="part"/>
 </template>
 
 <style scoped></style>

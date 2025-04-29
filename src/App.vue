@@ -10,7 +10,7 @@ import CrochetItem from "@/components/CrochetItem.vue";
   </header>
 
   <main>
-    <CrochetItem />
+    <CrochetItem/>
   </main>
 </template>
 
